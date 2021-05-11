@@ -1,0 +1,15 @@
+button {
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px; 
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    background-color: $primary-color;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    &:hover {
+        background-color: adjust-color($color: $primary-color, $lightness: 4%, $alpha: 1.0);
+    }
+}

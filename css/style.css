@@ -1,0 +1,219 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Colors */
+/* Padding & Margin */
+/* Borders */
+/* Shadows */
+.howItWorks__card, .exploreSection, .localisation, header, .card__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restaurants, .howItWorks, .exploreSection {
+  padding: 50px 20px 60px 20px;
+}
+
+button {
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  border: none;
+  border-radius: 25px;
+  background-color: #9356DC;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #9e67e0;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/Ressources/fonts/Roboto/Roboto-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(/Ressources/fonts/Roboto/Roboto-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url(/Ressources/fonts/Shrikhand/Shrikhand-Regular.ttf);
+}
+body {
+  font-family: "Roboto";
+}
+
+.card {
+  overflow: hidden;
+  /* Pour que les images ne dépassent pas dans les coins */
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.card__thumb {
+  height: 175px;
+}
+.card__label {
+  justify-content: space-between;
+  padding: 20px;
+}
+.card--grey {
+  background-color: #f6f6f6;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.restaurants .card .icon {
+  font-size: 20px;
+}
+
+header {
+  position: relative;
+  height: 60px;
+}
+
+header .icon {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+}
+
+.footer {
+  padding: 25px 20px 35px 20px;
+  margin-bottom: 20px;
+  color: white;
+  background-color: #353535;
+}
+.footer__heading {
+  font-family: "Shrikhand";
+  font-size: 1.2em;
+  font-weight: 100;
+}
+.footer__links {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer i {
+  margin-right: 10px;
+}
+
+body {
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*---------------------------------------- Accueil ----------------------------------------*/
+.localisation {
+  height: 50px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #eaeaea;
+  box-shadow: inset 0 10px 5px -5px rgba(0, 0, 0, 0.2);
+}
+.localisation__icon {
+  margin-right: 10px;
+}
+
+.exploreSection {
+  background-color: #f6f6f6;
+}
+
+.exploreContent {
+  text-align: center;
+}
+.exploreContent__heading {
+  margin-bottom: 20px;
+}
+.exploreContent__text {
+  margin-bottom: 35px;
+}
+
+.howItWorks__heading {
+  margin-bottom: 25px;
+}
+.howItWorks__card {
+  margin-bottom: 25px;
+}
+.howItWorks__card__icon {
+  width: 20px;
+  margin-right: 15px;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.restaurants__heading {
+  margin-bottom: 5px;
+}
+
+/*-------------------------------------- Restaurants --------------------------------------*/
+.thumb {
+  height: 260px;
+}
+.thumb__picture {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  position: relative;
+  /* Pour que le menu chevauche la miniature */
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: #f6f6f6;
+  padding: 20px;
+}
+.menu__heading {
+  font-family: "Shrikhand";
+  display: flex;
+  align-items: center;
+}
+
+.card-group {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */

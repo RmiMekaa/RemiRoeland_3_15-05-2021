@@ -1,0 +1,25 @@
+.footer {
+    padding: 25px 20px 35px 20px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #353535;
+    &__heading {
+        font-family: "Shrikhand";
+        font-size: 1.2em;
+        font-weight: 100;
+    }
+    &__links {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.footer a {
+    color: white;
+}
+
+.footer i {
+    margin-right: 10px;
+}

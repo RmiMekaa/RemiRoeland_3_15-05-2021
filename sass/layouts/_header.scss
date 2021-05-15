@@ -2,10 +2,11 @@ header {
     @extend %flex-center;
     position: relative;
     height: 60px;
-}
-
-header .icon {
-    position: absolute;
-    left: 20px;
-    top: 25px;
+    & h1 {
+        font-family: "Shrikhand";
+        font-weight: normal;
+        &:hover {
+            color: $primary-color;
+        }
+    }
 }

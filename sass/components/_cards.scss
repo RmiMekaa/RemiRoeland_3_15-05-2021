@@ -1,27 +1,8 @@
-.card {
-    overflow: hidden; /* Pour que les images ne dépassent pas dans les coins */
+%card {
     border-radius: $border-radius;
     box-shadow: $box-shadow;
-    &__thumb {
-        height: 175px;
-    }
-    &__label {
-        @extend %flex-center;
-        justify-content: space-between;
-        padding: $padding;
-    }
     &--grey {
         background-color: $background-color-light;
     }
-}
-
-.card img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;    
-}
-
-.restaurants .card .icon {
-    font-size: 20px;
 }
 

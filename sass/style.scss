@@ -6,6 +6,7 @@
 @import "./components/cards";
 @import "./layouts/header";
 @import "./layouts/footer";
+@import "./pages/homePage";
 
 
 body {
@@ -14,65 +15,11 @@ body {
     margin-right: auto;
 }
 
-/*---------------------------------------- Accueil ----------------------------------------*/
-.localisation {
-    @extend %flex-center;
-    height: 50px;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.650);
-    background-color: $background-color;
-    box-shadow: inset 0 10px 5px -5px rgba(0, 0, 0, 0.200);
-    &__icon {
-        margin-right: 10px;
-    }
-}
-
-.exploreSection {
-    @extend %flex-center, %box-padding;
-    background-color: $background-color-light;
-}
-
-.exploreContent {
-    text-align: center;
-    &__heading {
-        margin-bottom: 20px;
-    }
-    &__text {
-        margin-bottom: 35px;
-    }
-}
-
-.howItWorks {
-    @extend %box-padding;
-    &__heading {
-        margin-bottom: 25px;
-    }
-    &__card {
-        @extend %flex-center;
-        margin-bottom: 25px;
-        &__icon {
-            width: 20px;
-            margin-right: 15px;
-        }
-    }
-}
-
-.restaurants {
-    @extend %box-padding;
-    background-color: $background-color-light;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    &__heading {
-        margin-bottom: 5px;
-    }
-}
-
 /*-------------------------------------- Restaurants --------------------------------------*/
 
 .thumb {
     height: 260px;
-    
+
     &__picture {
     height: 100%;
     width: 100%;
@@ -91,11 +38,23 @@ body {
     padding: $padding;
 
     &__heading {
-    font-family: "Shrikhand";
-    display: flex;
-    align-items: center;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__name {
+            font-family: "Shrikhand";
+            font-weight: 100;
+            margin-right: 40px;        
+        }
+
+        &__icon {
+            font-size: 25px;
+        }
     }
 }
+
 
 .card-group {
     padding-top: 20px;

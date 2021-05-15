@@ -18,13 +18,13 @@ a {
 /* Padding & Margin */
 /* Borders */
 /* Shadows */
-.howItWorks__card, .exploreSection, .localisation, header, .card__label {
+.localisation, header {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.restaurants, .howItWorks, .exploreSection {
+.restaurants, .howItWorks {
   padding: 50px 20px 60px 20px;
 }
 
@@ -64,42 +64,35 @@ body {
   font-family: "Roboto";
 }
 
-.card {
-  overflow: hidden;
-  /* Pour que les images ne dépassent pas dans les coins */
-  border-radius: 15px;
+.explore__text {
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.howItWorks__card p::before, .localisation::before, .footer a:nth-of-type(2)::before, .footer a:first-of-type::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+}
+
+.howItWorks__card {
+  border-radius: 1rem;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
-.card__thumb {
-  height: 175px;
-}
-.card__label {
-  justify-content: space-between;
-  padding: 20px;
-}
-.card--grey {
+.howItWorks__card {
   background-color: #f6f6f6;
-}
-
-.card img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.restaurants .card .icon {
-  font-size: 20px;
 }
 
 header {
   position: relative;
   height: 60px;
 }
-
-header .icon {
-  position: absolute;
-  left: 20px;
-  top: 25px;
+header h1 {
+  font-family: "Shrikhand";
+  font-weight: normal;
+}
+header h1:hover {
+  color: #9356DC;
 }
 
 .footer {
@@ -112,65 +105,130 @@ header .icon {
   font-family: "Shrikhand";
   font-size: 1.2em;
   font-weight: 100;
+  margin-bottom: 15px;
 }
-.footer__links {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .footer a {
+  display: block;
+  margin-bottom: 5px;
   color: white;
 }
-
-.footer i {
-  margin-right: 10px;
+.footer a:hover {
+  color: #99E2D0;
 }
 
-body {
-  max-width: 375px;
-  margin-left: auto;
-  margin-right: auto;
+.footer a:first-of-type::before {
+  margin-right: 1rem;
+  content: "";
 }
 
-/*---------------------------------------- Accueil ----------------------------------------*/
+.footer a:nth-of-type(2)::before {
+  margin-right: 0.55rem;
+  content: "";
+}
+
+/*---------------------------------------- Localisation ----------------------------------------*/
 .localisation {
   height: 50px;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.65);
+  color: #000000a6;
   background-color: #eaeaea;
   box-shadow: inset 0 10px 5px -5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
-.localisation__icon {
-  margin-right: 10px;
-}
-
-.exploreSection {
-  background-color: #f6f6f6;
+.localisation::before {
+  content: "";
+  margin-right: 0.5rem;
 }
 
-.exploreContent {
+/*---------------------------------------- Explore ----------------------------------------*/
+.explore {
   text-align: center;
+  background-color: #f6f6f6;
+  padding: 40px 20px 50px 20px;
 }
-.exploreContent__heading {
+.explore__heading {
   margin-bottom: 20px;
 }
-.exploreContent__text {
-  margin-bottom: 35px;
+.explore__text {
+  margin-bottom: 30px;
 }
 
+/*---------------------------------------- How it works ----------------------------------------*/
 .howItWorks__heading {
   margin-bottom: 25px;
 }
 .howItWorks__card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 12.5px;
   margin-bottom: 25px;
+  height: 75px;
 }
-.howItWorks__card__icon {
-  width: 20px;
-  margin-right: 15px;
+.howItWorks__card::before {
+  content: "";
+  position: absolute;
+  left: -12.5px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #9356DC;
+}
+.howItWorks__card:hover {
+  cursor: pointer;
+  background-color: #f5edff;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+}
+.howItWorks__card:hover > p::before {
+  color: #9356DC;
+}
+.howItWorks__card p {
+  font-weight: bold;
+  margin-left: 5rem;
+}
+.howItWorks__card p::before {
+  content: "";
+  position: absolute;
+  left: 3rem;
+  color: #7e7e7e;
+  margin-right: 1rem;
 }
 
+.howItWorks__card:last-of-type {
+  margin-bottom: 0;
+}
+
+/* 1,2,3 */
+.howItWorks__card:first-of-type::before {
+  content: "1";
+}
+
+.howItWorks__card:nth-of-type(2)::before {
+  content: "2";
+}
+
+.howItWorks__card:last-of-type::before {
+  content: "3";
+}
+
+/* Icons */
+.howItWorks__card p:first-of-type:before {
+  content: "";
+}
+
+.howItWorks__card:nth-of-type(2) p::before {
+  content: "";
+}
+
+.howItWorks__card:last-of-type p::before {
+  content: "";
+}
+
+/*---------------------------------------- Restaurants ----------------------------------------*/
 .restaurants {
   background-color: #f6f6f6;
   display: flex;
@@ -179,6 +237,33 @@ body {
 }
 .restaurants__heading {
   margin-bottom: 5px;
+}
+.restaurants__card {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.restaurants__card img {
+  display: block;
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+.restaurants__card__label {
+  padding: 18px 15px;
+  background-color: white;
+}
+.restaurants__card__label h3 {
+  margin-bottom: 5px;
+}
+.restaurants__card:hover {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*-------------------------------------- Restaurants --------------------------------------*/
@@ -203,9 +288,18 @@ body {
   padding: 20px;
 }
 .menu__heading {
-  font-family: "Shrikhand";
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.menu__heading__name {
+  font-family: "Shrikhand";
+  font-weight: 100;
+  margin-right: 40px;
+}
+.menu__heading__icon {
+  font-size: 25px;
 }
 
 .card-group {

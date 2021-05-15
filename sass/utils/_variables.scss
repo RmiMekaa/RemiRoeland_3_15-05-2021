@@ -1,4 +1,5 @@
 /* Colors */
+
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
@@ -10,8 +11,9 @@ $background-color-light: #f6f6f6;
 $padding: 20px;
 
 /* Borders */
-$border-radius: 15px;
+$border-radius: 1rem;
 
 /* Shadows */
 $box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+$box-shadow-darker: 0px 5px 10px 0px rgba(0,0,0,0.4);
 

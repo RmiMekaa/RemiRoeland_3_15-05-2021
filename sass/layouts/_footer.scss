@@ -7,19 +7,26 @@
         font-family: "Shrikhand";
         font-size: 1.2em;
         font-weight: 100;
+        margin-bottom: 15px;
     }
-    &__links {
-        margin-top: 15px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+    & a {
+        display: block;
+        margin-bottom: 5px;
+        color: white;
+        &:hover {
+            color: $tertiary-color;
+        }
     }
 }
 
-.footer a {
-    color: white;
+.footer a:first-of-type::before {
+    margin-right: 1rem;
+    @extend %font-awesome;
+    content:"\f2e7";
 }
 
-.footer i {
-    margin-right: 10px;
+.footer a:nth-of-type(2)::before {
+    margin-right: 0.55rem;
+    @extend %font-awesome;
+    content:"\f4c4";
 }

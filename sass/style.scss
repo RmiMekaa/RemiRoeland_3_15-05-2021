@@ -15,54 +15,57 @@ body {
     margin-right: auto;
 }
 
-/*-------------------------------------- Restaurants --------------------------------------*/
+/*-------------------------------------- La Palette du goût --------------------------------------*/
 
 .thumb {
     height: 260px;
-
-    &__picture {
-    height: 100%;
     width: 100%;
     object-fit: cover;
-    }
 }
 
 .menu {
-    position: relative; /* Pour que le menu chevauche la miniature */
-    bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 30px;
+    position: relative;
+    margin-top: -30px; /* superpose le menu et l'image */
+    border-radius: 2rem 2rem 0 0;
     background-color: $background-color-light;
     padding: $padding;
-
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     &__heading {
-        margin-bottom: 20px;
+        font-size: 1.6rem;
+        font-family: "Shrikhand";
+        font-weight: 100;
+    }
+    &__category {
+        font-size: 1rem;
+        font-weight: normal;
+        text-transform: uppercase;
+        width: fit-content;
+        margin-top: 15px;
+        border-bottom: 3px solid $tertiary-color;
+    }
+    &__card {
+        @extend %card;
+        height: 68px;
         display: flex;
         align-items: center;
-        justify-content: center;
-
-        &__name {
-            font-family: "Shrikhand";
-            font-weight: 100;
-            margin-right: 40px;        
+        justify-content: space-between;
+        padding: 0 $padding 0 $padding;
+        cursor: pointer;
+        &__details {
+            font-size: 0.8rem;
         }
-
-        &__icon {
-            font-size: 25px;
-        }
+    }
+    &__button {
+        width: 186px;
+        margin: 32px auto 40px auto;
     }
 }
 
 
-.card-group {
-    padding-top: 20px;
-    padding-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+
+
 
 
 

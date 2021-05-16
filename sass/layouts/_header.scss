@@ -10,3 +10,15 @@ header {
         }
     }
 }
+
+.arrow::before {
+    @extend %font-awesome;
+    content:"\f060";
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.5rem;
+}
+
+.arrow:hover::before {
+    color: $primary-color;
+}

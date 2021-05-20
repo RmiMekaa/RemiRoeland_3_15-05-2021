@@ -70,7 +70,7 @@ body {
   font-size: 16px;
 }
 
-.restaurants__card__label .fav::before, .howItWorks__card p::before, .localisation::before, .footer a:nth-of-type(2)::before, .footer a:first-of-type::before, .arrow::before {
+.menu__card__effect::after, .restaurants__card__label .fav::before, .howItWorks__card p::before, .localisation::before, .footer a:nth-of-type(2)::before, .footer a:first-of-type::before, .arrow::before {
   font-family: "Font Awesome 5 Free";
   font-weight: bold;
 }
@@ -79,6 +79,7 @@ body {
   border-radius: 1rem;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
   background-color: white;
+  overflow: hidden;
 }
 .howItWorks__card {
   background-color: #f6f6f6;
@@ -176,6 +177,7 @@ header h1:hover {
   position: relative;
   display: flex;
   align-items: center;
+  overflow: visible;
   margin-left: 12.5px;
   margin-bottom: 25px;
   height: 75px;
@@ -254,7 +256,6 @@ header h1:hover {
 }
 .restaurants__card {
   position: relative;
-  overflow: hidden;
 }
 .restaurants__card img {
   display: block;
@@ -342,9 +343,107 @@ body {
 .menu__card__details {
   font-size: 0.8rem;
 }
-.menu__button {
+.menu__card__details__price {
+  display: block;
+  padding-left: 20px;
+}
+.menu__card__button {
   width: 186px;
   margin: 32px auto 40px auto;
+}
+
+/*-------------------------------------Animations--------------------------------------------*/
+.menu__card, .menu__category {
+  animation: fadeIn 1s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.card2 {
+  animation-delay: 0.2s;
+}
+
+.card3 {
+  animation-delay: 0.4s;
+}
+
+.menu__category:nth-of-type(2) {
+  animation-delay: 0.6s;
+}
+
+.card4 {
+  animation-delay: 0.6s;
+}
+
+.card5 {
+  animation-delay: 0.8s;
+}
+
+.card6 {
+  animation-delay: 1s;
+}
+
+.menu__category:last-of-type {
+  animation-delay: 1.2s;
+}
+
+.card7 {
+  animation-delay: 1.2s;
+}
+
+.card8 {
+  animation-delay: 1.4s;
+}
+
+.card9 {
+  animation-delay: 1.6s;
+}
+
+.card10 {
+  animation-delay: 1.8s;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/*--------------------------------------------------------------------------------------*/
+.menu__card__effect {
+  content: "";
+  position: absolute;
+  right: -70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 100%;
+  background-color: #99E2D0;
+}
+
+.menu__card__effect::after {
+  color: white;
+  font-size: 1.6rem;
+  content: "";
+}
+
+.menu__card:hover > .menu__card__effect, .menu__card:hover > .menu__card__price {
+  transform: translateX(-70px);
+  transition: all 0.6s;
+}
+
+.menu__card:hover > .menu__card__effect::after {
+  transform: rotate(360deg);
+  transition: all 0.6s;
+}
+
+.menu__card__details {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

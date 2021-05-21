@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Réservez votre restaurant et composez votre menu en ligne pour un service rapide à votre arrivée !"/>
     <title>ohmyfood</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
@@ -12,6 +13,12 @@
     <header>
         <a href="#"><h1>ohmyfood</h1></a>
     </header>
+
+    <div class=loader>
+        <h1 class="loader__heading">ohmyfood</h1>
+        <i class="loader__icon fas fa-utensils"></i>
+        <span class="loader__open">OPEN</span> 
+    </div>
 
     <section class="localisation" onclick="">
         <span>Paris, Belleville</span>
@@ -39,37 +46,49 @@
     <section class="restaurants">
         <h2 class="restaurants__heading">Restaurants</h2>
         <a href="LaPaletteDuGout.html" class="restaurants__card">
-            <img src="Ressources/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+            <img src="Ressources/images/restaurants/Small/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
             <article class="restaurants__card__label">
                 <h3>La palette du goût</h3>
                 <p>Ménilmontant</p>
-                <aside class="fav" onclick=""></aside>
+                <aside class="fav" onclick="">
+                    <i class="fav__empty-heart far fa-heart"></i>
+                    <i class="fav__fill-heart fas fa-heart"></i>
+                </aside>
             </article>
             <aside class="restaurants__card__new">Nouveau</aside>
         </a>
         <a href="LaNoteEnchantee.html" class="restaurants__card">
-            <img src="Ressources/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+            <img src="Ressources/images/restaurants/Small/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
             <article class="restaurants__card__label">
                 <h3>La note enchantée</h3>
                 <p>Charonne</p>
-                <aside class="fav" onclick=""></aside>
+                <aside class="fav" onclick="">
+                    <i class="fav__empty-heart far fa-heart"></i>
+                    <i class="fav__fill-heart fas fa-heart"></i>
+                </aside>
             </article>
             <aside class="restaurants__card__new">Nouveau</aside>
         </a>
         <a href="ALaFrancaise.html" class="restaurants__card">
-            <img src="Ressources/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+            <img src="Ressources/images/restaurants/Small/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
             <article class="restaurants__card__label">
                 <h3>À la française</h3>
                 <p>Cité Rouge</p>
-                <aside class="fav" onclick=""></aside>
+                <aside class="fav" onclick="">
+                    <i class="fav__empty-heart far fa-heart"></i>
+                    <i class="fav__fill-heart fas fa-heart"></i>
+                </aside>
             </article>
         </a>
         <a href="LeDeliceDesSens.html" class="restaurants__card">
-            <img src="Ressources/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+            <img src="Ressources/images/restaurants/Small/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
             <article class="restaurants__card__label">
                 <h3>Le délice des sens</h3>
                 <p>Folie-Méricourt</p>
-                <aside class="fav" onclick=""></aside>
+                <aside class="fav" onclick="">
+                    <i class="fav__empty-heart far fa-heart"></i>
+                    <i class="fav__fill-heart fas fa-heart"></i>
+                </aside>
             </article>
         </a>
     </section>
@@ -79,7 +98,7 @@
         <a href="">Proposer un restaurant</a>
         <a href="">Devenir partenaire</a>
         <a href="">Mentions légales</a>
-        <a href="">Contact</a>
+        <a href="mailto:roeland.remi@yahoo.fr">Contact</a>
     </footer>
 
 </body>

@@ -1,12 +1,12 @@
 /*---------------------------------------- Localisation ----------------------------------------*/
 .localisation {
-    @extend %flex-center;
-    height: 50px;
+    @include flexBox(row, center, center);
+    @extend %cursor-pointer;
+    height: 3.1rem;
     font-weight: bold;
     color: #000000a6;
     background-color: $background-color;
     box-shadow: inset 0 10px 5px -5px rgba(0, 0, 0, 0.200);
-    cursor: pointer;
     &::before {
         @extend %font-awesome;
         content: "\f3c5";
@@ -19,13 +19,13 @@
 .explore {
     text-align: center;
     background-color: $background-color-light;
-    padding: 40px 20px 50px 20px;
+    padding: 2.5rem 1.25rem 3rem 1.25rem;
     &__heading {
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
     }
     &__text {
         @extend %font-regular;
-        margin-bottom: 30px;
+        margin-bottom: 1.9rem;
     }
 }
 
@@ -34,32 +34,30 @@
 .howItWorks {
     @extend %box-padding;
     &__heading {
-        margin-bottom: 25px;
+        margin-bottom: 1.6rem;
     }
     &__card {
+        @include flexBox(row, null, center);
         position: relative;
-        display: flex;
-        align-items: center;
         @extend %card, %card--grey;
         overflow: visible;
-        margin-left: 12.5px;
-        margin-bottom: 25px;
-        height: 75px;
+        margin-left: 0.8rem;
+        margin-bottom: 1.6rem;
+        height: 4.7rem;
         &::before {
+            /* Numéros */
+            @include flexBox (row, center, center);
             content: "";
             position: absolute;
-            left: -12.5px;
+            left: -0.8rem;
             color: white;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            height: 25px;
-            width: 25px;
+            height: 1.6rem;
+            width: 1.6rem;
             border-radius: 50%;
             background-color: $primary-color;
         }
         &:hover {
-            cursor: pointer;
+            @extend %cursor-pointer;
             background-color: #f5edff;
             & > p::before {
             color: $primary-color;
@@ -69,6 +67,7 @@
             font-weight: bold;
             margin-left: 5rem;
             &::before {
+                /* Icones */
                 @extend %font-awesome;
                 content: "";            
                 position: absolute;
@@ -110,12 +109,11 @@
 
 .restaurants {
     @extend %box-padding;
+    @include flexBox(column, null, null);
     background-color: $background-color-light;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+    gap: 1.1rem;
     &__heading {
-        margin-bottom: 5px;
+        margin-bottom: 0.3rem;
     }
     &__card {
         @extend %card;
@@ -123,40 +121,62 @@
         & img {
             display: block;
             width: 100%;
-            height: 175px;
+            height: 11rem;
             object-fit: cover;   
         }
         &__label {
             position: relative;
-            padding: 18px 15px;
+            padding: 1rem 1.2rem;
             background-color: white;
             & h3 {
-                margin-bottom: 5px;
-            }
-            & .fav::before { 
-                position: absolute;
-                right: 1.5rem;
-                top: 1rem;
-                @extend %font-awesome;
-                font-weight: normal;
-                font-size: 1.5rem;
-                content: "\f004";
+                margin-bottom: 0.3rem;
             }
         }
         &__new {
-            width: 80px;
-            height: 30px;
+            @include flexBox(row, center, center);
+            width: 5rem;
+            height: 2rem;
             position: absolute;
             z-index: 1000;
-            top: 11px;
-            right: 11px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 5px;
+            top: 0.7rem;
+            right: 0.7rem;
+            border-radius: 0.3rem;
             background-color: $tertiary-color;
-            color: #008766;
-            font-size: 14px;
+            color: darken($tertiary-color, 40%);
+            font-size: 0.9rem;
         }
     }
+}
+
+/* ---------------------------------------- Fav animation --------------------------------------------*/
+
+.fav {
+    position: absolute;
+    font-size: 1.5rem;
+    right: 1.5rem;
+    top: 1.5rem;
+    line-height: 0;
+    &__empty-heart {
+        @extend %cursor-pointer;
+        position:absolute;
+        right: 0;
+        transition: transform 0.4s;
+    }
+    &__fill-heart {
+        @extend %cursor-pointer;
+        position: relative;
+        transform: scale(0);
+        transition: transform 0.4s;
+        background: -webkit-gradient(linear, right top, left bottom, from($primary-color), to($secondary-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.fav:hover .fav__empty-heart {
+    transform: scale(0);
+}
+
+.fav:hover .fav__fill-heart {
+    transform: scale(1);
 }

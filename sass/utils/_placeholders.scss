@@ -1,9 +1,7 @@
-%flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;  
+%box-padding {
+    padding: 3rem 1.25rem 3.75rem 1.25rem;
 }
 
-%box-padding {
-    padding: 50px 20px 60px 20px;
+%cursor-pointer {
+    cursor: pointer;
 }

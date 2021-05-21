@@ -1,17 +1,17 @@
 .footer {
-    padding: 25px 20px 35px 20px;
-    margin-bottom: 20px;
+    padding: 1.6rem 1.25rem 2.2rem 1.25rem;
+    margin-bottom: 1.25rem;
     color: white;
     background-color: #353535;
     &__heading {
         font-family: "Shrikhand";
         font-size: 1.2em;
-        font-weight: 100;
-        margin-bottom: 15px;
+        font-weight: normal;
+        margin-bottom: 1rem;
     }
     & a {
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 0.3rem;
         color: white;
         &:hover {
             color: $tertiary-color;

@@ -1,15 +1,15 @@
 button {
-    height: 50px;
-    padding-left: 20px;
-    padding-right: 20px; 
+    @extend %cursor-pointer;
+    height: 3.1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem; 
     text-align: center;
     border: none;
-    border-radius: 25px;
+    border-radius: 1.6rem;
     background-color: $primary-color;
     font-weight: bold;
     color: white;
-    cursor: pointer;
     &:hover {
-        background-color: adjust-color($color: $primary-color, $lightness: 4%, $alpha: 1.0);
+        background: linear-gradient($secondary-color, lighten($primary-color, 5%));
     }
 }

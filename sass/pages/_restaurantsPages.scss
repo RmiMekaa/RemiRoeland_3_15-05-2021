@@ -1,0 +1,143 @@
+.thumb {
+    height: 16.25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu {
+    @include flexBox(column, null, null);
+    position: relative;
+    margin-top: -2rem; /* superpose le menu et l'image */
+    border-radius: 2rem 2rem 0 0;
+    background-color: $background-color-light;
+    padding: $padding;
+    gap: 1rem;
+    &__heading {
+        position: relative;
+        font-size: 1.6rem;
+        font-family: "Shrikhand";
+        font-weight: 100;
+    }
+    &__category {
+        font-size: 1rem;
+        font-weight: normal;
+        text-transform: uppercase;
+        width: fit-content;
+        margin-top: 1rem;
+        border-bottom: 0.15rem solid $tertiary-color;
+    }
+    &__card {
+        @include flexBox(row, space-between, center);
+        @extend %card, %cursor-pointer;
+        height: 4.25rem;
+        & div {
+            width: 80%;
+            padding-left: $padding;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        & h4 {
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        &__price {
+            @include flexBox(row, center, null);
+            position: relative;
+            font-weight: bold;
+            top: 0.6rem;
+            width: 20%;
+        }
+        &__details {
+            font-size: 0.8rem;
+        }
+    }
+    &__button {
+        width: 11.5rem;
+        margin: 2rem auto 2.5rem auto;
+    }
+}
+
+/*------------------------------------- Animation: Fade In --------------------------------------------*/
+
+.menu__card, .menu__category {
+    animation: fadeIn 1s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.card2 {
+    animation-delay: 0.2s;
+}
+.card3 {
+    animation-delay: 0.4s;
+}
+
+.menu__category:nth-of-type(2) {
+    animation-delay: 0.6s;
+}
+
+.card4 {
+    animation-delay: 0.6s;
+}
+.card5 {
+    animation-delay: 0.8s;
+}
+.card6 {
+    animation-delay: 1s;
+}
+
+.menu__category:last-of-type {
+    animation-delay: 1.2s;
+}
+
+.card7 {
+    animation-delay: 1.2s;
+}
+.card8 {
+    animation-delay: 1.4s;
+}
+.card9 {
+    animation-delay: 1.6s;
+}
+.card10 {
+    animation-delay: 1.8s;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(2rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*--------------------------------------- Animation : Coche -------------------------------------------*/
+
+.menu__card__effect {
+    @include flexBox(row, center, center);
+    width: 0;
+    height: 100%;
+    background-color: $tertiary-color;
+    transition: width 0.5s;
+}
+
+.menu__card__effect::after {
+    @extend %font-awesome;
+    color: white;
+    font-size: 1.6rem;
+    content:"\f058";
+}
+
+.menu__card:hover > .menu__card__effect {
+    width: 5rem;
+} 
+
+.menu__card:hover > .menu__card__effect::after {
+    transform: rotate(360deg);
+    transition: all 0.5s;
+}

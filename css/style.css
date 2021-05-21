@@ -49,19 +49,19 @@ button:hover {
 
 @font-face {
   font-family: "Roboto";
-  src: url(/Ressources/fonts/Roboto/Roboto-Regular.ttf);
+  src: url(Ressources/fonts/Roboto/Roboto-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: url(/Ressources/fonts/Roboto/Roboto-Bold.ttf);
+  src: url(Ressources/fonts/Roboto/Roboto-Bold.ttf);
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Shrikhand";
-  src: url(/Ressources/fonts/Shrikhand/Shrikhand-Regular.ttf);
+  src: url(Ressources/fonts/Shrikhand/Shrikhand-Regular.ttf);
 }
 body {
   font-family: "Roboto";

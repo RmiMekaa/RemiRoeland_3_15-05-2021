@@ -8,10 +8,14 @@
     @include flexBox(column, null, null);
     position: relative;
     margin-top: -2rem; /* superpose le menu et l'image */
-    border-radius: 2rem 2rem 0 0;
+    border-radius: 2rem;
     background-color: $background-color-light;
     padding: $padding;
     gap: 1rem;
+    & section {
+        @include flexBox(column, null, null);
+        gap: 1rem;
+    }
     &__heading {
         position: relative;
         font-size: 1.6rem;
@@ -42,9 +46,11 @@
             overflow: hidden;
         }
         &__price {
-            @include flexBox(row, center, null);
+            @include flexBox(row, flex-end, null);
             position: relative;
             font-weight: bold;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
             top: 0.6rem;
             width: 20%;
         }
@@ -66,48 +72,50 @@
     animation-fill-mode: forwards;
 }
 
-.card2 {
+.item1 {
     animation-delay: 0.2s;
 }
-.card3 {
+.item2 {
     animation-delay: 0.4s;
 }
-
-.menu__category:nth-of-type(2) {
+.item3 {
     animation-delay: 0.6s;
 }
-
-.card4 {
-    animation-delay: 0.6s;
-}
-.card5 {
+.item4 {
     animation-delay: 0.8s;
 }
-.card6 {
+.item5 {
     animation-delay: 1s;
 }
-
-.menu__category:last-of-type {
+.item6 {
     animation-delay: 1.2s;
 }
-
-.card7 {
-    animation-delay: 1.2s;
-}
-.card8 {
+.item7 {
     animation-delay: 1.4s;
 }
-.card9 {
+.item8 {
     animation-delay: 1.6s;
 }
-.card10 {
+.item9 {
     animation-delay: 1.8s;
+}
+.item10 {
+    animation-delay: 2s;
+}
+.item11 {
+    animation-delay: 2.2s;
+}
+.item12 {
+    animation-delay: 2.4s;
+}
+.item13 {
+    animation-delay: 2.6s;
 }
 
 
 @keyframes fadeIn {
     0% {
-        transform: translateY(2rem);
+        transform: translateY(1.5rem);
         opacity: 0;
     }
     100% {
@@ -134,10 +142,48 @@
 }
 
 .menu__card:hover > .menu__card__effect {
-    width: 25%;
+    width: 6rem;
 } 
 
 .menu__card:hover > .menu__card__effect::after {
     transform: rotate(360deg);
     transition: all 0.5s;
+}
+
+/*-------------------------------------------- Media Queries ------------------------------------------------*/
+
+@media all and (min-width:1280px) {
+ 
+    .thumb {
+        height: 20rem;
+    }
+    
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2rem auto 3rem;
+        gap: 2rem;
+        padding: 2rem;
+        background-color: $background-color-light;
+        & section {
+            background-color: $background-color;
+            border-radius: 2rem;
+            padding: 1rem 2rem 2rem 2rem;
+        }
+        &__heading {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        &__button {
+            margin-top: 0;
+            margin-bottom: 0;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    }
+
+    .fav {
+        right: 2rem;
+        top: 2rem;
+    }
 }

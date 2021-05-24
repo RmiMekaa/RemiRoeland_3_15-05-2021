@@ -1,6 +1,5 @@
 .footer {
     padding: 1.6rem 1.25rem 2.2rem 1.25rem;
-    margin-bottom: 1.25rem;
     color: white;
     background-color: #353535;
     &__heading {
@@ -29,4 +28,25 @@
     margin-right: 0.55rem;
     @extend %font-awesome;
     content:"\f4c4";
+}
+
+@media all and (min-width: 1280px) {
+    .footer {
+        padding: 2rem 2rem 1.2rem 2rem;
+        border-radius: 2rem 2rem 0 0;
+        display: flex;
+        gap: 2rem;
+        justify-content: space-evenly;
+        &__heading {
+            position: relative;
+            bottom: 0.3rem;
+        }
+        & a {
+            margin: 0;
+            height: fit-content;
+        }
+        & h4 {
+            margin: 0;
+        }
+    }
 }

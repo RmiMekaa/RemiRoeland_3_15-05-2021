@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Réservez votre restaurant et composez votre menu en ligne pour un service rapide à votre arrivée !"/>
     <title>ohmyfood - Le Délice des Sens</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 </head>
 <body>
     <header>
-        <a class="arrow" href="Index.html"></a>
-        <a href="#"><h1>ohmyfood</h1></a>
+        <a class="arrow" href="index.html"></a>
+        <a href="index.html"><h1>ohmyfood</h1></a>
     </header>
 
     <main>
@@ -19,71 +20,85 @@
 
         <section class="menu">
             <h2 class="menu__heading">Le Délice des Sens</h2>
+            <aside class="fav" onclick="">
+                <i class="fav__empty-heart far fa-heart"></i>
+                <i class="fav__fill-heart fas fa-heart"></i>
+            </aside>
             <h3 class="menu__category">Entrées</h3>
-            <article class="menu__card">
+            <article class="menu__card card1">
                 <div>
                     <h4>Tartare de thon</h4>
                     <span class="menu__card__details">Assaisonné au yuzu</span>
                 </div>
-                <span class="menu__card__price">25€</span>   
+                <span class="menu__card__price">25€</span>
+                <aside class="menu__card__effect"></aside>   
             </article>
-            <article class="menu__card">
+            <article class="menu__card card2">
                 <div>
                     <h4>Bouchée de homard croustillant</h4>
                     <span class="menu__card__details">Et sa farandole de petits légumes</span>
                 </div>
                 <span class="menu__card__price">35€</span>
+                <aside class="menu__card__effect"></aside>   
             </article>
-            <article class="menu__card">
+            <article class="menu__card card3">
                 <div>
                     <h4>Velouté de cèpes</h4>
                     <span class="menu__card__details">Aux truffes</span>
                 </div>
                 <span class="menu__card__price">20€</span>
+                <aside class="menu__card__effect"></aside>   
             </article>
             <h3 class="menu__category">Plats</h3>
-            <article class="menu__card">
+            <article class="menu__card card4">
                 <div>
                     <h4>Poulet rôti aux herbes de Provence</h4>
                     <span class="menu__card__details">Et sa crème de truffe</span>
                 </div>
                 <span class="menu__card__price">40€</span>
+                <aside class="menu__card__effect"></aside>   
             </article>
-            <article class="menu__card">
+            <article class="menu__card card5">
                 <div>
                     <h4>Langouste rôtie</h4>
                     <span class="menu__card__details">Et ses légumes de saison</span>
                 </div>
                 <span class="menu__card__price">35€</span>
+                <aside class="menu__card__effect"></aside>   
             </article>
-            <article class="menu__card">
+            <article class="menu__card card6">
                 <div>
                     <h4>Côte de boeuf Angus</h4>
                     <span class="menu__card__details">Et sa purée de panais</span>
                 </div>
                 <span class="menu__card__price">44€</span>
+                <aside class="menu__card__effect"></aside>   
             </article>
+            
             <h3 class="menu__category">Desserts</h3>
-            <article class="menu__card">
+            <article class="menu__card card7">
                 <div>
                     <h4>Farandole de desserts</h4>
                     <span class="menu__card__details">Du chef</span>
                 </div>
                 <span class="menu__card__price">18€</span>
+                <aside class="menu__card__effect"></aside>   
             </article>
-            <article class="menu__card">
+            <article class="menu__card card8">
                 <div>
                     <h4>Crème brulée</h4>
                     <span class="menu__card__details">Revisitée</span>
                 </div>
                 <span class="menu__card__price">22€</span>
+                <aside class="menu__card__effect"></aside>   
             </article>
-            <article class="menu__card">
+            <article class="menu__card card9">
                 <div>
                     <h4>Tiramisu</h4>
                     <span class="menu__card__details">À la noisette</span>
                 </div>
                 <span class="menu__card__price">23€</span>
+                <aside class="menu__card__effect"></aside>   
             </article>
             <button class="menu__button">Commander</button>
         </section>

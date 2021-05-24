@@ -49,19 +49,19 @@ button:hover {
 
 @font-face {
   font-family: "Roboto";
-  src: url("/Ressources/fonts/Roboto/Roboto-Regular.ttf");
+  src: url(/Ressources/fonts/Roboto/Roboto-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/Ressources/fonts/Roboto/Roboto-Bold.ttf");
+  src: url(/Ressources/fonts/Roboto/Roboto-Bold.ttf);
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Shrikhand";
-  src: url("/Ressources/fonts/Shrikhand/Shrikhand-Regular.ttf");
+  src: url(/Ressources/fonts/Shrikhand/Shrikhand-Regular.ttf);
 }
 body {
   font-family: "Roboto";
@@ -317,7 +317,6 @@ header h1:hover {
 .fav__fill-heart {
   position: relative;
   transform: scale(0);
-  transition: transform 0.4s;
   background: -webkit-gradient(linear, right top, left bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -328,9 +327,106 @@ header h1:hover {
 }
 
 .fav:hover .fav__fill-heart {
-  transform: scale(1);
+  animation: scale 0.4s forwards;
 }
 
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*------------------------------------------- LOADER --------------------------------------------*/
+.loader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 375px;
+  height: 100%;
+  z-index: 10000;
+  background-color: #99E2D0;
+  animation: 1.5s loader 3s ease-in-out forwards;
+  transform-origin: top;
+}
+.loader__heading {
+  position: absolute;
+  top: 1rem;
+  color: white;
+  font-family: "Shrikhand";
+  font-weight: normal;
+  font-size: 3rem;
+}
+.loader__icon {
+  color: white;
+  font-size: 4rem;
+  animation: spin 0.7s linear 3, fadeOut 2.5s forwards;
+}
+.loader__open {
+  position: absolute;
+  font-family: "Shrikhand";
+  font-weight: normal;
+  font-size: 4rem;
+  color: white;
+  border: 0.5rem solid white;
+  border-radius: 1rem;
+  line-height: 3rem;
+  padding: 0.3rem 1.5rem 0 1rem;
+  transform: rotate(-8deg);
+  animation: opening 1s 2.5s backwards;
+}
+
+@keyframes loader {
+  0% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-30vh);
+    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  }
+  90% {
+    transform: translateY(-60vh);
+    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  }
+  100% {
+    transform: translateY(-100vh);
+    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes opening {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .thumb {
   height: 16.25rem;
   width: 100%;
@@ -477,99 +573,12 @@ header h1:hover {
 }
 
 .menu__card:hover > .menu__card__effect {
-  width: 5rem;
+  width: 25%;
 }
 
 .menu__card:hover > .menu__card__effect::after {
   transform: rotate(360deg);
   transition: all 0.5s;
-}
-
-.loader {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100vh;
-  max-width: 375px;
-  height: 100%;
-  z-index: 10000;
-  background-color: #99E2D0;
-  animation: 1.5s loader 4s ease-in-out forwards;
-  transform-origin: top;
-}
-.loader__heading {
-  position: absolute;
-  top: 1rem;
-  color: white;
-  font-family: "Shrikhand";
-  font-weight: normal;
-  font-size: 3rem;
-}
-.loader__icon {
-  color: white;
-  font-size: 4rem;
-  animation: spin 1s linear 3, fadeOut 3.5s forwards;
-}
-.loader__open {
-  position: absolute;
-  font-family: "Shrikhand";
-  font-weight: normal;
-  font-size: 4rem;
-  color: white;
-  border: 0.5rem solid white;
-  border-radius: 1rem;
-  line-height: 3rem;
-  padding: 0.3rem 1.5rem 0 1rem;
-  transform: rotate(-8deg);
-  animation: opening 1s 3.5s backwards;
-}
-
-@keyframes loader {
-  0% {
-    transform: translateY(0);
-  }
-  80% {
-    transform: translateY(-30vh);
-    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  }
-  90% {
-    transform: translateY(-60vh);
-    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  }
-  100% {
-    transform: translateY(-100vh);
-    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  }
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes opening {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

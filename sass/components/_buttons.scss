@@ -1,5 +1,5 @@
 button {
-    @extend %cursor-pointer;
+    @extend %cursor-pointer, %font-bold;
     height: 3.1rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem; 
@@ -7,9 +7,10 @@ button {
     border: none;
     border-radius: 1.6rem;
     background-color: $primary-color;
-    font-weight: bold;
     color: white;
+    box-shadow: $box-shadow;
     &:hover {
         background: linear-gradient($secondary-color, lighten($primary-color, 5%));
+        box-shadow: $box-shadow-darker;
     }
 }

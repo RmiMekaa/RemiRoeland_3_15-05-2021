@@ -20,16 +20,21 @@ a {
   color: black;
 }
 
-/* Colors */
-/* Padding & Margin */
-/* Borders */
-/* Shadows */
 .restaurants, .howItWorks {
   padding: 3rem 1.25rem 3.75rem 1.25rem;
 }
 
-.menu__card, .fav__fill-heart, .fav__empty-heart, .howItWorks__card:hover, .localisation, button {
+.menu__card, .fav__fill-heart, .fav__empty-heart, .howItWorks__card:hover, .location, button {
   cursor: pointer;
+}
+
+.menu__card__price, .howItWorks__card p, .location, button {
+  font-weight: bold;
+}
+
+.menu__card__effect::after, .howItWorks__card p::before, .location::before, .footer a:nth-of-type(2)::before, .footer a:first-of-type::before, .arrow::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
 }
 
 button {
@@ -40,42 +45,32 @@ button {
   border: none;
   border-radius: 1.6rem;
   background-color: #9356DC;
-  font-weight: bold;
   color: white;
+  box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.2);
 }
 button:hover {
   background: linear-gradient(#FF79DA, #a16be0);
+  box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.4);
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url(/Ressources/fonts/Roboto/Roboto-Regular.ttf);
+  src: url(../Ressources/fonts/Roboto/Roboto-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: url(/Ressources/fonts/Roboto/Roboto-Bold.ttf);
+  src: url(../Ressources/fonts/Roboto/Roboto-Bold.ttf);
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Shrikhand";
-  src: url(/Ressources/fonts/Shrikhand/Shrikhand-Regular.ttf);
+  src: url(../Ressources/fonts/Shrikhand/Shrikhand-Regular.ttf);
 }
 body {
   font-family: "Roboto";
-}
-
-.explore__text {
-  font-family: "Roboto";
-  font-weight: normal;
-  font-size: 16px;
-}
-
-.menu__card__effect::after, .howItWorks__card p::before, .localisation::before, .footer a:nth-of-type(2)::before, .footer a:first-of-type::before, .arrow::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: bold;
 }
 
 .menu__card, .restaurants__card, .howItWorks__card {
@@ -105,7 +100,7 @@ header h1 {
   font-weight: normal;
 }
 header h1:hover {
-  color: #99E2D0;
+  color: #9356DC;
 }
 
 .arrow::before {
@@ -116,7 +111,7 @@ header h1:hover {
 }
 
 .arrow:hover::before {
-  color: #99E2D0;
+  color: #9356DC;
 }
 
 @media all and (min-width: 1280px) {
@@ -175,20 +170,22 @@ header h1:hover {
     margin: 0;
   }
 }
-/*---------------------------------------- Localisation ----------------------------------------*/
-.localisation {
+/*---------------------------------------- Location ----------------------------------------*/
+.location {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 3.1rem;
-  font-weight: bold;
-  color: #000000a6;
+  color: #666666;
   background-color: #eaeaea;
 }
-.localisation::before {
+.location::before {
   content: "";
   margin-right: 0.5rem;
+}
+.location:hover {
+  color: #9356DC;
 }
 
 /*---------------------------------------- Explore ----------------------------------------*/
@@ -235,13 +232,12 @@ header h1:hover {
   background-color: #9356DC;
 }
 .howItWorks__card:hover {
-  background-color: #f5edff;
+  background-color: #f4eefc;
 }
 .howItWorks__card:hover > p::before {
   color: #9356DC;
 }
 .howItWorks__card p {
-  font-weight: bold;
   margin-left: 5rem;
 }
 .howItWorks__card p::before {
@@ -249,7 +245,7 @@ header h1:hover {
   content: "";
   position: absolute;
   left: 3rem;
-  color: #7e7e7e;
+  color: gray;
   margin-right: 1rem;
 }
 
@@ -380,7 +376,8 @@ header h1:hover {
   height: 100%;
   z-index: 10000;
   background-color: #99E2D0;
-  animation: 1.5s loader 3s ease-in-out forwards;
+  /* Animation du volet */
+  animation: 1.5s loader 3.5s ease-in-out forwards;
   transform-origin: top;
 }
 .loader__heading {
@@ -391,10 +388,23 @@ header h1:hover {
   font-weight: normal;
   font-size: 3rem;
 }
+.loader__plate {
+  display: block;
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  border: 0.5rem solid white;
+  border-radius: 50%;
+  border-color: transparent white transparent white;
+  /* Animation de l'assiette */
+  animation: spin 1s linear reverse 3, fadeOut 3.3s forwards;
+}
 .loader__icon {
+  position: relative;
   color: white;
   font-size: 4rem;
-  animation: spin 0.7s linear 3, fadeOut 2.5s forwards;
+  /* Animation de l'icone */
+  animation: spin 1s linear 3, fadeOut 3.3s forwards;
 }
 .loader__open {
   position: absolute;
@@ -407,24 +417,25 @@ header h1:hover {
   line-height: 3rem;
   padding: 0.3rem 1.5rem 0 1rem;
   transform: rotate(-8deg);
-  animation: opening 1s 2.5s backwards;
+  /* Animation du panneau Open */
+  animation: openSign 1.2s 3.3s backwards;
 }
 
 @keyframes loader {
   0% {
     transform: translateY(0);
   }
-  80% {
-    transform: translateY(-30vh);
-    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  60% {
+    transform: translateY(-20vh);
+    animation-timing-function: ease-in-out;
   }
-  90% {
-    transform: translateY(-60vh);
-    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  75% {
+    transform: translateY(-50vh);
+    animation-timing-function: ease-in-out;
   }
   100% {
     transform: translateY(-100vh);
-    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    animation-timing-function: ease-in-out;
   }
 }
 @keyframes fadeOut {
@@ -446,7 +457,7 @@ header h1:hover {
     transform: rotate(360deg);
   }
 }
-@keyframes opening {
+@keyframes openSign {
   0% {
     opacity: 0;
   }
@@ -527,7 +538,7 @@ header h1:hover {
   }
 }
 @media all and (min-width: 1280px) {
-  .localisation {
+  .location {
     border-radius: 0 0 2rem 2rem;
     width: 400px;
     margin: auto;
@@ -588,7 +599,7 @@ header h1:hover {
   position: relative;
   font-size: 1.6rem;
   font-family: "Shrikhand";
-  font-weight: 100;
+  font-weight: normal;
 }
 .menu__category {
   font-size: 1rem;
@@ -621,7 +632,6 @@ header h1:hover {
   flex-direction: row;
   justify-content: flex-end;
   position: relative;
-  font-weight: bold;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   top: 0.6rem;
@@ -743,10 +753,10 @@ header h1:hover {
     grid-template-rows: 2rem auto 3rem;
     gap: 2rem;
     padding: 2rem;
-    background-color: #f6f6f6;
+    background-color: white;
   }
   .menu section {
-    background-color: #eaeaea;
+    background-color: #f6f6f6;
     border-radius: 2rem;
     padding: 1rem 2rem 2rem 2rem;
   }

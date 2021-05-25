@@ -7,13 +7,13 @@ header {
         font-family: "Shrikhand";
         font-weight: normal;
         &:hover {
-            color: $tertiary-color;
+            color: $primary-color;
         }
     }
 }
 
 .arrow::before {
-    @extend %font-awesome;
+    @extend %font-awesome-bold;
     content:"\f060";
     position: absolute;
     bottom: 1.2rem;
@@ -21,7 +21,7 @@ header {
 }
 
 .arrow:hover::before {
-    color: $tertiary-color;
+    color: $primary-color;
 }
 
 @media all and (min-width: 1280px) {

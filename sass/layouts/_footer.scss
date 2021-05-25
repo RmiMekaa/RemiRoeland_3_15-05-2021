@@ -20,13 +20,13 @@
 
 .footer a:first-of-type::before {
     margin-right: 1rem;
-    @extend %font-awesome;
+    @extend %font-awesome-bold;
     content:"\f2e7";
 }
 
 .footer a:nth-of-type(2)::before {
     margin-right: 0.55rem;
-    @extend %font-awesome;
+    @extend %font-awesome-bold;
     content:"\f4c4";
 }
 

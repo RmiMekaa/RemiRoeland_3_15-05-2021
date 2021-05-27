@@ -1,4 +1,8 @@
-.thumb {
+body {
+    font-family: "Roboto";
+}
+
+.thumb img{
     height: 16.25rem;
     width: 100%;
     object-fit: cover;
@@ -28,7 +32,13 @@
         text-transform: uppercase;
         width: fit-content;
         margin-top: 1rem;
-        border-bottom: 0.15rem solid $tertiary-color;
+        &::after {
+            display: block;
+            content: "";
+            width: 2.5rem;
+            height: 0.2rem;
+            background-color: $tertiary-color;
+        }
     }
     &__card {
         @include flexBox(row, space-between, center);
@@ -160,7 +170,7 @@
     
     .menu {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 32% 32% 32%;
         grid-template-rows: 2rem auto 3rem;
         gap: 2rem;
         padding: 2rem;

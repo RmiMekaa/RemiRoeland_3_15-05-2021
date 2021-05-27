@@ -10,8 +10,8 @@
     }
     & a {
         display: block;
-        margin-bottom: 0.3rem;
         color: white;
+        margin-bottom: 0.5rem;
         &:hover {
             color: $tertiary-color;
         }
@@ -28,6 +28,17 @@
     margin-right: 0.55rem;
     @extend %font-awesome-bold;
     content:"\f4c4";
+}
+
+// Media querie pour rendre la zone cliquable plus facilement sur mobile et tablette
+@media all and (max-width: 768px) {
+    .footer__heading {
+        margin-bottom: 2rem;
+    }
+    .footer a {
+        margin-bottom: 0;
+        height: 3rem;
+    }
 }
 
 @media all and (min-width: 1280px) {

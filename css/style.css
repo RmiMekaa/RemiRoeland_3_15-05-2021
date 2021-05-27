@@ -53,26 +53,6 @@ button:hover {
   box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.4);
 }
 
-@font-face {
-  font-family: "Roboto";
-  src: url(../Ressources/fonts/Roboto/Roboto-Regular.ttf);
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url(../Ressources/fonts/Roboto/Roboto-Bold.ttf);
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Shrikhand";
-  src: url(../Ressources/fonts/Shrikhand/Shrikhand-Regular.ttf);
-}
-body {
-  font-family: "Roboto";
-}
-
 .menu__card, .restaurants__card, .howItWorks__card {
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.2);
@@ -133,8 +113,8 @@ header h1:hover {
 }
 .footer a {
   display: block;
-  margin-bottom: 0.3rem;
   color: white;
+  margin-bottom: 0.5rem;
 }
 .footer a:hover {
   color: #99E2D0;
@@ -150,6 +130,16 @@ header h1:hover {
   content: "";
 }
 
+@media all and (max-width: 768px) {
+  .footer__heading {
+    margin-bottom: 2rem;
+  }
+
+  .footer a {
+    margin-bottom: 0;
+    height: 3rem;
+  }
+}
 @media all and (min-width: 1280px) {
   .footer {
     padding: 2rem 2rem 1.2rem 2rem;
@@ -170,6 +160,10 @@ header h1:hover {
     margin: 0;
   }
 }
+body {
+  font-family: "Roboto";
+}
+
 /*---------------------------------------- Location ----------------------------------------*/
 .location {
   display: flex;
@@ -573,7 +567,11 @@ header h1:hover {
     grid-column-end: 5;
   }
 }
-.thumb {
+body {
+  font-family: "Roboto";
+}
+
+.thumb img {
   height: 16.25rem;
   width: 100%;
   object-fit: cover;
@@ -607,7 +605,13 @@ header h1:hover {
   text-transform: uppercase;
   width: fit-content;
   margin-top: 1rem;
-  border-bottom: 0.15rem solid #99E2D0;
+}
+.menu__category::after {
+  display: block;
+  content: "";
+  width: 2.5rem;
+  height: 0.2rem;
+  background-color: #99E2D0;
 }
 .menu__card {
   display: flex;
@@ -749,7 +753,7 @@ header h1:hover {
 
   .menu {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 32% 32% 32%;
     grid-template-rows: 2rem auto 3rem;
     gap: 2rem;
     padding: 2rem;

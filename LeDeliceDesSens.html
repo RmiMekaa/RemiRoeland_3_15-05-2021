@@ -8,6 +8,8 @@
     <title>ohmyfood - Le Délice des Sens</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,7 +18,11 @@
     </header>
 
     <main>
-        <img class="thumb" src="Ressources/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+        <picture class="thumb">
+            <source srcset="Ressources/images/restaurants/Small/LeDeliceDesSens-500px.jpg" media="(max-width: 768px)">
+            <source srcset="Ressources/images/restaurants/LeDeliceDesSens-1280px.jpg" media="(min-width: 768px)">
+            <img src="Ressources/images/restaurants/Small/LeDeliceDesSens-500px.jpg" alt="" />
+        </picture>
 
         <section class="menu">
             <h2 class="menu__heading">Le Délice des Sens</h2>
@@ -111,10 +117,10 @@
 
     <footer class="footer">
         <h4 class="footer__heading">ohmyfood</h4>
-        <a href="">Proposer un restaurant</a>
-        <a href="">Devenir partenaire</a>
-        <a href="">Mentions légales</a>
-        <a href="">Contact</a>
+        <a href="#">Proposer un restaurant</a>
+        <a href="#">Devenir partenaire</a>
+        <a href="#">Mentions légales</a>
+        <a href="mailto:hello@ohmyfood.com">Contact</a>
     </footer>
 </body>
 </html>

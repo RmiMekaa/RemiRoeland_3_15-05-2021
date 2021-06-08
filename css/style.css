@@ -6,6 +6,8 @@
 }
 
 body {
+  width: 100%;
+  min-height: 100vh;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -20,8 +22,16 @@ a {
   color: black;
 }
 
+h1 {
+  font-size: 1.9rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
 .restaurants, .howItWorks {
-  padding: 3rem 1.25rem 3.75rem 1.25rem;
+  padding: 3rem 1.25rem 4rem 1.25rem;
 }
 
 .menu__card, .fav__fill-heart, .fav__empty-heart, .howItWorks__card:hover, .location, button {
@@ -38,18 +48,20 @@ a {
 }
 
 button {
+  font-size: 0.9rem;
+  font-weight: lighter;
   height: 3.1rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   text-align: center;
   border: none;
   border-radius: 1.6rem;
-  background-color: #9356DC;
+  background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.2);
 }
 button:hover {
-  background: linear-gradient(#FF79DA, #a16be0);
+  background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -101,6 +113,8 @@ header h1:hover {
   }
 }
 .footer {
+  width: 100%;
+  max-width: 1600px;
   padding: 1.6rem 1.25rem 2.2rem 1.25rem;
   color: white;
   background-color: #353535;
@@ -142,6 +156,8 @@ header h1:hover {
 }
 @media all and (min-width: 1280px) {
   .footer {
+    position: absolute;
+    bottom: 0;
     padding: 2rem 2rem 1.2rem 2rem;
     border-radius: 2rem 2rem 0 0;
     display: flex;
@@ -186,10 +202,13 @@ body {
 .explore {
   text-align: center;
   background-color: #f6f6f6;
-  padding: 2.5rem 1.25rem 3rem 1.25rem;
+  padding: 2.4rem 1.25rem 3.5rem 1.25rem;
 }
 .explore__heading {
+  font-size: 1.4rem;
   margin-bottom: 1.25rem;
+  padding: 0 3rem;
+  line-height: 1.7rem;
 }
 .explore__text {
   margin-bottom: 1.9rem;
@@ -206,7 +225,7 @@ body {
   position: relative;
   overflow: visible;
   margin-left: 0.8rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.3rem;
   height: 4.7rem;
   padding-right: 2rem;
 }

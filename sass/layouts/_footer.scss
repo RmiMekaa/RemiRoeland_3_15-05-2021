@@ -1,4 +1,6 @@
 .footer {
+    width: 100%;
+    max-width: 1600px;
     padding: 1.6rem 1.25rem 2.2rem 1.25rem;
     color: white;
     background-color: #353535;
@@ -30,7 +32,7 @@
     content:"\f4c4";
 }
 
-// Media querie pour rendre la zone cliquable plus facilement sur mobile et tablette
+// Media querie pour rendre la zone cliquable plus facilement sur mobile
 @media all and (max-width: 768px) {
     .footer__heading {
         margin-bottom: 2rem;
@@ -43,6 +45,8 @@
 
 @media all and (min-width: 1280px) {
     .footer {
+        position: absolute;
+        bottom: 0;    
         padding: 2rem 2rem 1.2rem 2rem;
         border-radius: 2rem 2rem 0 0;
         display: flex;

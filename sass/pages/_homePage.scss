@@ -24,9 +24,12 @@ body {
 .explore {
     text-align: center;
     background-color: $background-color-light;
-    padding: 2.5rem 1.25rem 3rem 1.25rem;
+    padding: 2.4rem 1.25rem 3.5rem 1.25rem;
     &__heading {
+        font-size: 1.4rem;
         margin-bottom: 1.25rem;
+        padding: 0 3rem;
+        line-height: 1.7rem;
     }
     &__text {
         margin-bottom: 1.9rem;
@@ -46,7 +49,7 @@ body {
         @extend %card, %card--grey;
         overflow: visible;
         margin-left: 0.8rem;
-        margin-bottom: 1.6rem;
+        margin-bottom: 1.3rem;
         height: 4.7rem;
         padding-right: 2rem;
         &::before {

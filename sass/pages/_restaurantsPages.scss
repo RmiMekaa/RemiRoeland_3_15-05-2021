@@ -77,7 +77,7 @@ body {
 /*------------------------------------- Animation: Fade In --------------------------------------------*/
 
 .menu__card, .menu__category {
-    animation: fadeIn 1s ease-out;
+    animation: emergence 1s ease-out;
     opacity: 0;
     animation-fill-mode: forwards;
 }
@@ -123,7 +123,7 @@ body {
 }
 
 
-@keyframes fadeIn {
+@keyframes emergence {
     0% {
         transform: translateY(1.5rem);
         opacity: 0;

@@ -1,6 +1,6 @@
 button {
     @extend %cursor-pointer, %font-bold;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: lighter;
     height: 3.1rem;
     padding-left: 1.25rem;
@@ -12,7 +12,7 @@ button {
     color: white;
     box-shadow: $box-shadow;
     &:hover {
-        background: linear-gradient(lighten($secondary-color,5%), lighten($primary-color, 5%));
+        background: linear-gradient(lighten($secondary-color,7%), lighten($primary-color, 7%));
         box-shadow: $box-shadow-darker;
     }
 }

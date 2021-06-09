@@ -31,7 +31,7 @@ h2 {
 }
 
 .restaurants, .howItWorks {
-  padding: 3rem 1.25rem 4rem 1.25rem;
+  padding: 3rem 1.25rem 4.25rem 1.25rem;
 }
 
 .menu__card, .fav__fill-heart, .fav__empty-heart, .howItWorks__card:hover, .location, button {
@@ -48,7 +48,7 @@ h2 {
 }
 
 button {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: lighter;
   height: 3.1rem;
   padding-left: 1.25rem;
@@ -61,7 +61,7 @@ button {
   box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.2);
 }
 button:hover {
-  background: linear-gradient(#ff93e1, #a16be0);
+  background: linear-gradient(#ff9de4, #a674e2);
   box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -156,8 +156,6 @@ header h1:hover {
 }
 @media all and (min-width: 1280px) {
   .footer {
-    position: absolute;
-    bottom: 0;
     padding: 2rem 2rem 1.2rem 2rem;
     border-radius: 2rem 2rem 0 0;
     display: flex;
@@ -202,7 +200,7 @@ body {
 .explore {
   text-align: center;
   background-color: #f6f6f6;
-  padding: 2.4rem 1.25rem 3.5rem 1.25rem;
+  padding: 2.4rem 1rem 3.5rem 1rem;
 }
 .explore__heading {
   font-size: 1.4rem;
@@ -212,6 +210,8 @@ body {
 }
 .explore__text {
   margin-bottom: 1.9rem;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 /*---------------------------------------- How it works ----------------------------------------*/
@@ -347,7 +347,6 @@ body {
 .fav__empty-heart {
   position: absolute;
   right: 0;
-  transition: transform 0.4s;
 }
 .fav__fill-heart {
   position: relative;
@@ -358,7 +357,8 @@ body {
 }
 
 .fav:hover .fav__empty-heart {
-  transform: scale(0);
+  transform: scale(5);
+  transition: transform 1s;
 }
 
 .fav:hover .fav__fill-heart {
@@ -390,7 +390,7 @@ body {
   z-index: 10000;
   background-color: #99E2D0;
   /* Animation du volet */
-  animation: 1.5s loader 3.5s ease-in-out forwards;
+  animation: 1.5s translate 3.5s ease-in-out forwards;
   transform-origin: top;
 }
 .loader__heading {
@@ -431,10 +431,10 @@ body {
   padding: 0.3rem 1.5rem 0 1rem;
   transform: rotate(-8deg);
   /* Animation du panneau Open */
-  animation: openSign 1.2s 3.3s backwards;
+  animation: fadeIn 1.2s 3.3s backwards;
 }
 
-@keyframes loader {
+@keyframes translate {
   0% {
     transform: translateY(0);
   }
@@ -470,11 +470,11 @@ body {
     transform: rotate(360deg);
   }
 }
-@keyframes openSign {
-  0% {
+@keyframes fadeIn {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
@@ -524,7 +524,9 @@ body {
     font-weight: bold;
     font-size: 3rem;
     color: #666666;
-    content: "";
+  }
+  .howItWorks__card:hover::after {
+    color: #9356DC;
   }
   .howItWorks p {
     position: relative;
@@ -670,7 +672,7 @@ body {
 
 /*------------------------------------- Animation: Fade In --------------------------------------------*/
 .menu__card, .menu__category {
-  animation: fadeIn 1s ease-out;
+  animation: emergence 1s ease-out;
   opacity: 0;
   animation-fill-mode: forwards;
 }
@@ -727,7 +729,7 @@ body {
   animation-delay: 2.6s;
 }
 
-@keyframes fadeIn {
+@keyframes emergence {
   0% {
     transform: translateY(1.5rem);
     opacity: 0;

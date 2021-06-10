@@ -12,7 +12,7 @@ body {
     @include flexBox(column, null, null);
     position: relative;
     margin-top: -2rem; /* superpose le menu et l'image */
-    border-radius: 2rem;
+    border-radius: $border-radius*2;
     background-color: $background-color-light;
     padding: $padding;
     gap: 1rem;
@@ -77,53 +77,12 @@ body {
 /*------------------------------------- Animation: Fade In --------------------------------------------*/
 
 .menu__card, .menu__category {
-    animation: emergence 1s ease-out;
+    animation: fadeInMenu 1s ease-out;
     opacity: 0;
     animation-fill-mode: forwards;
+    -webkit-tap-highlight-color: transparent;
 }
-
-.item1 {
-    animation-delay: 0.2s;
-}
-.item2 {
-    animation-delay: 0.4s;
-}
-.item3 {
-    animation-delay: 0.6s;
-}
-.item4 {
-    animation-delay: 0.8s;
-}
-.item5 {
-    animation-delay: 1s;
-}
-.item6 {
-    animation-delay: 1.2s;
-}
-.item7 {
-    animation-delay: 1.4s;
-}
-.item8 {
-    animation-delay: 1.6s;
-}
-.item9 {
-    animation-delay: 1.8s;
-}
-.item10 {
-    animation-delay: 2s;
-}
-.item11 {
-    animation-delay: 2.2s;
-}
-.item12 {
-    animation-delay: 2.4s;
-}
-.item13 {
-    animation-delay: 2.6s;
-}
-
-
-@keyframes emergence {
+@keyframes fadeInMenu {
     0% {
         transform: translateY(1.5rem);
         opacity: 0;
@@ -131,6 +90,12 @@ body {
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@for $item from 1 through 13 {
+    .item#{$item} {
+        animation-delay: $item * 0.2s;
     }
 }
 
@@ -151,13 +116,13 @@ body {
     content:"\f058";
 }
 
-.menu__card:hover > .menu__card__effect {
+.menu__card:hover .menu__card__effect {
     width: 6rem;
 } 
 
-.menu__card:hover > .menu__card__effect::after {
+.menu__card:hover .menu__card__effect::after {
     transform: rotate(360deg);
-    transition: all 0.5s;
+    transition: transform 0.5s;
 }
 
 /*-------------------------------------------- Media Queries ------------------------------------------------*/
@@ -177,7 +142,7 @@ body {
         background-color: white;
         & section {
             background-color: $background-color-light;
-            border-radius: 2rem;
+            border-radius: $border-radius*2;
             padding: 1rem 2rem 2rem 2rem;
         }
         &__heading {

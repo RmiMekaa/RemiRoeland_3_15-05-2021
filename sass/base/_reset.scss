@@ -5,8 +5,6 @@
 }
 
 body {
-    width: 100%;
-    min-height: 100vh;
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
@@ -19,6 +17,7 @@ ul {
 a {
     text-decoration: none;
     color: black;
+    -webkit-tap-highlight-color: transparent;
 }
 
 h1 {

@@ -6,8 +6,6 @@
 }
 
 body {
-  width: 100%;
-  min-height: 100vh;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -20,6 +18,7 @@ ul {
 a {
   text-decoration: none;
   color: black;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1 {
@@ -357,8 +356,8 @@ body {
 }
 
 .fav:hover .fav__empty-heart {
-  transform: scale(5);
-  transition: transform 1s;
+  transform: scale(0);
+  transition: transform 0.4s;
 }
 
 .fav:hover .fav__fill-heart {
@@ -409,15 +408,14 @@ body {
   border: 0.5rem solid white;
   border-radius: 50%;
   border-color: transparent white transparent white;
-  /* Animation de l'assiette */
-  animation: spin 1s linear reverse 3, fadeOut 3.3s forwards;
+  animation: spin 1s linear reverse 3, fadeInOut 0.3s 3s reverse forwards;
 }
 .loader__icon {
   position: relative;
   color: white;
   font-size: 4rem;
   /* Animation de l'icone */
-  animation: spin 1s linear 3, fadeOut 3.3s forwards;
+  animation: spin 1s linear 3, fadeInOut 0.3s 3s reverse forwards;
 }
 .loader__open {
   position: absolute;
@@ -431,7 +429,7 @@ body {
   padding: 0.3rem 1.5rem 0 1rem;
   transform: rotate(-8deg);
   /* Animation du panneau Open */
-  animation: fadeIn 1.2s 3.3s backwards;
+  animation: fadeInOut 1.2s 3.3s backwards;
 }
 
 @keyframes translate {
@@ -451,15 +449,12 @@ body {
     animation-timing-function: ease-in-out;
   }
 }
-@keyframes fadeOut {
+@keyframes fadeInOut {
   0% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 1;
+    opacity: 0;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 @keyframes spin {
@@ -468,14 +463,6 @@ body {
   }
   to {
     transform: rotate(360deg);
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 /*-------------------------------------------------- Media Queries ----------------------------------------------*/
@@ -672,11 +659,22 @@ body {
 
 /*------------------------------------- Animation: Fade In --------------------------------------------*/
 .menu__card, .menu__category {
-  animation: emergence 1s ease-out;
+  animation: fadeInMenu 1s ease-out;
   opacity: 0;
   animation-fill-mode: forwards;
+  -webkit-tap-highlight-color: transparent;
 }
 
+@keyframes fadeInMenu {
+  0% {
+    transform: translateY(1.5rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .item1 {
   animation-delay: 0.2s;
 }
@@ -729,16 +727,6 @@ body {
   animation-delay: 2.6s;
 }
 
-@keyframes emergence {
-  0% {
-    transform: translateY(1.5rem);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 /*--------------------------------------- Animation : Coche -------------------------------------------*/
 .menu__card__effect {
   display: flex;
@@ -757,13 +745,13 @@ body {
   content: "";
 }
 
-.menu__card:hover > .menu__card__effect {
+.menu__card:hover .menu__card__effect {
   width: 6rem;
 }
 
-.menu__card:hover > .menu__card__effect::after {
+.menu__card:hover .menu__card__effect::after {
   transform: rotate(360deg);
-  transition: all 0.5s;
+  transition: transform 0.5s;
 }
 
 /*-------------------------------------------- Media Queries ------------------------------------------------*/

@@ -369,7 +369,8 @@ body {
 @media all and (min-width: 1280px) {
 
     .location {
-        border-radius: 0 0 2rem 2rem;
+        border-bottom-right-radius: $border-radius*2;
+        border-bottom-left-radius: $border-radius*2;
         width: 400px;
         margin: auto;
     }

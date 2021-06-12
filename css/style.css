@@ -156,7 +156,8 @@ header h1:hover {
 @media all and (min-width: 1280px) {
   .footer {
     padding: 2rem 2rem 1.2rem 2rem;
-    border-radius: 2rem 2rem 0 0;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
     display: flex;
     gap: 2rem;
     justify-content: space-evenly;
@@ -541,7 +542,8 @@ body {
 }
 @media all and (min-width: 1280px) {
   .location {
-    border-radius: 0 0 2rem 2rem;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
     width: 400px;
     margin: auto;
   }

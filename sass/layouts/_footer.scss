@@ -46,7 +46,8 @@
 @media all and (min-width: 1280px) {
     .footer {
         padding: 2rem 2rem 1.2rem 2rem;
-        border-radius: 2rem 2rem 0 0;
+        border-top-left-radius: $border-radius*2;
+        border-top-right-radius: $border-radius*2;
         display: flex;
         gap: 2rem;
         justify-content: space-evenly;

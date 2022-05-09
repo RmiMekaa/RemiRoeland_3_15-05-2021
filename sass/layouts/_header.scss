@@ -3,9 +3,11 @@ header {
     position: relative;
     height: 3.75rem;
     box-shadow: 0 0px 5px 5px rgba(0, 0, 0, 0.100);
+
     & h1 {
-        font-family: "Shrikhand";
+        font-family: "Shrikhand", sans-serif;
         font-weight: normal;
+
         &:hover {
             color: $primary-color;
         }
@@ -14,7 +16,7 @@ header {
 
 .arrow::before {
     @extend %font-awesome-bold;
-    content:"\f060";
+    content: "\f060";
     position: absolute;
     bottom: 1.2rem;
     left: 1.5rem;

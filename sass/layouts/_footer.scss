@@ -4,16 +4,19 @@
     padding: 1.6rem 1.25rem 2.2rem 1.25rem;
     color: white;
     background-color: #353535;
+
     &__heading {
-        font-family: "Shrikhand";
+        font-family: "Shrikhand", sans-serif;
         font-size: 1.2em;
         font-weight: normal;
         margin-bottom: 1rem;
     }
+
     & a {
         display: block;
         color: white;
         margin-bottom: 0.5rem;
+
         &:hover {
             color: $tertiary-color;
         }
@@ -23,13 +26,13 @@
 .footer a:first-of-type::before {
     margin-right: 1rem;
     @extend %font-awesome-bold;
-    content:"\f2e7";
+    content: "\f2e7";
 }
 
 .footer a:nth-of-type(2)::before {
     margin-right: 0.55rem;
     @extend %font-awesome-bold;
-    content:"\f4c4";
+    content: "\f4c4";
 }
 
 // Media querie pour rendre la zone cliquable plus facilement sur mobile
@@ -37,6 +40,7 @@
     .footer__heading {
         margin-bottom: 2rem;
     }
+
     .footer a {
         margin-bottom: 0;
         height: 3rem;
@@ -51,14 +55,17 @@
         display: flex;
         gap: 2rem;
         justify-content: space-evenly;
+
         &__heading {
             position: relative;
             bottom: 0.3rem;
         }
+
         & a {
             margin: 0;
             height: fit-content;
         }
+
         & h4 {
             margin: 0;
         }

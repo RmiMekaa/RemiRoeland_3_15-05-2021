@@ -3,11 +3,12 @@
     box-shadow: $box-shadow;
     background-color: white;
     overflow: hidden;
+
     &--grey {
         background-color: $background-color-light;
     }
+
     &:hover {
         box-shadow: $box-shadow-darker;
     }
 }
-

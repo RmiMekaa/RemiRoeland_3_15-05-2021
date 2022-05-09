@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 * {
   margin: 0;
   padding: 0;
@@ -31,34 +30,20 @@ h2 {
   font-size: 1.4rem;
 }
 
-.restaurants,
-.howItWorks {
+.restaurants, .howItWorks {
   padding: 3rem 1.25rem 4.25rem 1.25rem;
 }
 
-.menu__card,
-.fav__fill-heart,
-.fav__empty-heart,
-.howItWorks__card:hover,
-.location,
-button {
+.menu__card, .fav__fill-heart, .fav__empty-heart, .howItWorks__card:hover, .location, button {
   cursor: pointer;
 }
 
-.menu__card__price,
-.howItWorks__card p,
-.location,
-button {
+.menu__card__price, .howItWorks__card p, .location, button {
   font-weight: bold;
 }
 
-.menu__card__effect::after,
-.howItWorks__card p::before,
-.location::before,
-.footer a:nth-of-type(2)::before,
-.footer a:first-of-type::before,
-.arrow::before {
-  font-family: "Font Awesome 5 Free";
+.menu__card__effect::after, .howItWorks__card p::before, .location::before, .footer a:nth-of-type(2)::before, .footer a:first-of-type::before, .arrow::before {
+  font-family: "Font Awesome 5 Free", sans-serif;
   font-weight: bold;
 }
 
@@ -75,24 +60,21 @@ button {
   color: white;
   box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.2);
 }
-
 button:hover {
   background: linear-gradient(#ff9de4, #a674e2);
   box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.4);
 }
 
-.menu__card,
-.restaurants__card,
-.howItWorks__card {
+.menu__card, .restaurants__card, .howItWorks__card {
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.2);
   background-color: white;
   overflow: hidden;
 }
-
-.menu__card:hover,
-.restaurants__card:hover,
-.howItWorks__card:hover {
+.howItWorks__card {
+  background-color: #f6f6f6;
+}
+.menu__card:hover, .restaurants__card:hover, .howItWorks__card:hover {
   box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -105,12 +87,10 @@ header {
   height: 3.75rem;
   box-shadow: 0 0px 5px 5px rgba(0, 0, 0, 0.1);
 }
-
 header h1 {
   font-family: "Shrikhand";
   font-weight: normal;
 }
-
 header h1:hover {
   color: #9356DC;
 }
@@ -132,7 +112,6 @@ header h1:hover {
     border-radius: 0 0 2rem 2rem;
   }
 }
-
 .footer {
   width: 100%;
   max-width: 1600px;
@@ -140,20 +119,17 @@ header h1:hover {
   color: white;
   background-color: #353535;
 }
-
 .footer__heading {
   font-family: "Shrikhand";
   font-size: 1.2em;
   font-weight: normal;
   margin-bottom: 1rem;
 }
-
 .footer a {
   display: block;
   color: white;
   margin-bottom: 0.5rem;
 }
-
 .footer a:hover {
   color: #99E2D0;
 }
@@ -178,7 +154,6 @@ header h1:hover {
     height: 3rem;
   }
 }
-
 @media all and (min-width: 1280px) {
   .footer {
     padding: 2rem 2rem 1.2rem 2rem;
@@ -188,22 +163,18 @@ header h1:hover {
     gap: 2rem;
     justify-content: space-evenly;
   }
-
   .footer__heading {
     position: relative;
     bottom: 0.3rem;
   }
-
   .footer a {
     margin: 0;
     height: fit-content;
   }
-
   .footer h4 {
     margin: 0;
   }
 }
-
 /*---------------------------------------- Location ----------------------------------------*/
 .location {
   display: flex;
@@ -214,12 +185,10 @@ header h1:hover {
   color: #666666;
   background-color: #eaeaea;
 }
-
 .location::before {
   content: "";
   margin-right: 0.5rem;
 }
-
 .location:hover {
   color: #9356DC;
 }
@@ -230,14 +199,12 @@ header h1:hover {
   background-color: #f6f6f6;
   padding: 2.4rem 1rem 3.5rem 1rem;
 }
-
 .explore__heading {
   font-size: 1.4rem;
   margin-bottom: 1.25rem;
   padding: 0 3rem;
   line-height: 1.7rem;
 }
-
 .explore__text {
   margin-bottom: 1.9rem;
   font-size: 1.2rem;
@@ -248,9 +215,7 @@ header h1:hover {
 .howItWorks__heading {
   margin-bottom: 1.6rem;
 }
-
 .howItWorks__card {
-  background-color: #f6f6f6;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -261,7 +226,6 @@ header h1:hover {
   height: 4.7rem;
   padding-right: 2rem;
 }
-
 .howItWorks__card::before {
   /* Numéros */
   display: flex;
@@ -277,19 +241,15 @@ header h1:hover {
   border-radius: 50%;
   background-color: #9356DC;
 }
-
 .howItWorks__card:hover {
   background-color: #f4eefc;
 }
-
-.howItWorks__card:hover>p::before {
+.howItWorks__card:hover > p::before {
   color: #9356DC;
 }
-
 .howItWorks__card p {
   margin-left: 5rem;
 }
-
 .howItWorks__card p::before {
   /* Icones */
   content: "";
@@ -336,32 +296,26 @@ header h1:hover {
   background-color: #f6f6f6;
   gap: 1.1rem;
 }
-
 .restaurants__heading {
   margin-bottom: 0.3rem;
 }
-
 .restaurants__card {
   position: relative;
 }
-
 .restaurants__card img {
   display: block;
   width: 100%;
   height: 11rem;
   object-fit: cover;
 }
-
 .restaurants__card__label {
   position: relative;
   padding: 1rem 1.2rem;
   background-color: white;
 }
-
 .restaurants__card__label h3 {
   margin-bottom: 0.3rem;
 }
-
 .restaurants__card__new {
   display: flex;
   flex-direction: row;
@@ -387,12 +341,10 @@ header h1:hover {
   top: 1.5rem;
   line-height: 0;
 }
-
 .fav__empty-heart {
   position: absolute;
   right: 0;
 }
-
 .fav__fill-heart {
   position: relative;
   transform: scale(0);
@@ -414,16 +366,13 @@ header h1:hover {
   0% {
     transform: scale(0);
   }
-
   80% {
     transform: scale(1.3);
   }
-
   100% {
     transform: scale(1);
   }
 }
-
 /*------------------------------------------- LOADER --------------------------------------------*/
 .loader {
   display: flex;
@@ -441,7 +390,6 @@ header h1:hover {
   animation: 1.5s translate 3.5s ease-in-out forwards;
   transform-origin: top;
 }
-
 .loader__heading {
   position: absolute;
   top: 1rem;
@@ -450,7 +398,6 @@ header h1:hover {
   font-weight: normal;
   font-size: 3rem;
 }
-
 .loader__plate {
   display: block;
   position: absolute;
@@ -461,7 +408,6 @@ header h1:hover {
   border-color: transparent white transparent white;
   animation: spin 1s linear reverse 3, fadeInOut 0.3s 3s reverse forwards;
 }
-
 .loader__icon {
   position: relative;
   color: white;
@@ -469,7 +415,6 @@ header h1:hover {
   /* Animation de l'icone */
   animation: spin 1s linear 3, fadeInOut 0.3s 3s reverse forwards;
 }
-
 .loader__open {
   position: absolute;
   font-family: "Shrikhand";
@@ -489,43 +434,35 @@ header h1:hover {
   0% {
     transform: translateY(0);
   }
-
   60% {
     transform: translateY(-20vh);
     animation-timing-function: ease-in-out;
   }
-
   75% {
     transform: translateY(-50vh);
     animation-timing-function: ease-in-out;
   }
-
   100% {
     transform: translateY(-100vh);
     animation-timing-function: ease-in-out;
   }
 }
-
 @keyframes fadeInOut {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
 }
-
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
 }
-
 /*-------------------------------------------------- Media Queries ----------------------------------------------*/
 @media all and (min-width: 768px) {
   .restaurants {
@@ -534,7 +471,6 @@ header h1:hover {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
-
   .restaurants__heading {
     margin-bottom: 0;
     grid-column-start: 1;
@@ -548,19 +484,16 @@ header h1:hover {
     column-gap: 2rem;
     padding: 2rem;
   }
-
   .howItWorks__heading {
     grid-column-start: 1;
     grid-column-end: 4;
   }
-
   .howItWorks__card {
     position: relative;
     height: 100%;
     padding: 1.5rem;
     justify-content: center;
   }
-
   .howItWorks__card::before {
     position: absolute;
     top: 2rem;
@@ -568,21 +501,18 @@ header h1:hover {
     width: 2rem;
     height: 2rem;
   }
-
   .howItWorks__card::after {
     width: 3rem;
     position: absolute;
     top: 2rem;
-    font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 5 Free", sans-serif;
     font-weight: bold;
     font-size: 3rem;
     color: #666666;
   }
-
   .howItWorks__card:hover::after {
     color: #9356DC;
   }
-
   .howItWorks p {
     position: relative;
     top: 2rem;
@@ -590,7 +520,6 @@ header h1:hover {
     margin: 0;
     text-align: center;
   }
-
   .howItWorks p::before {
     display: none;
   }
@@ -608,7 +537,6 @@ header h1:hover {
     content: "";
   }
 }
-
 @media all and (min-width: 1280px) {
   .location {
     border-bottom-right-radius: 2rem;
@@ -641,13 +569,11 @@ header h1:hover {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 2rem;
   }
-
   .restaurants__heading {
     grid-column-start: 1;
     grid-column-end: 5;
   }
 }
-
 .thumb img {
   height: 16.25rem;
   width: 100%;
@@ -665,20 +591,17 @@ header h1:hover {
   padding: 1.25rem;
   gap: 1rem;
 }
-
 .menu section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
 .menu__heading {
   position: relative;
   font-size: 1.6rem;
   font-family: "Shrikhand";
   font-weight: normal;
 }
-
 .menu__category {
   font-size: 1rem;
   font-weight: normal;
@@ -686,7 +609,6 @@ header h1:hover {
   width: fit-content;
   margin-top: 1rem;
 }
-
 .menu__category::after {
   display: block;
   content: "";
@@ -694,7 +616,6 @@ header h1:hover {
   height: 0.2rem;
   background-color: #99E2D0;
 }
-
 .menu__card {
   display: flex;
   flex-direction: row;
@@ -702,7 +623,6 @@ header h1:hover {
   align-items: center;
   height: 4.25rem;
 }
-
 .menu__card div {
   width: 80%;
   padding-left: 1.25rem;
@@ -710,12 +630,10 @@ header h1:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
 .menu__card h4 {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
 .menu__card__price {
   display: flex;
   flex-direction: row;
@@ -726,11 +644,9 @@ header h1:hover {
   top: 0.6rem;
   width: 20%;
 }
-
 .menu__card__details {
   font-size: 0.8rem;
 }
-
 .menu__button {
   width: 11.5rem;
   margin: 2rem auto 2.5rem auto;
@@ -750,13 +666,11 @@ header h1:hover {
     transform: translateY(1.5rem);
     opacity: 0;
   }
-
   100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
-
 .item1 {
   animation-delay: 0.2s;
 }
@@ -850,18 +764,15 @@ header h1:hover {
     padding: 2rem;
     background-color: white;
   }
-
   .menu section {
     background-color: #f6f6f6;
     border-radius: 2rem;
     padding: 1rem 2rem 2rem 2rem;
   }
-
   .menu__heading {
     grid-column-start: 1;
     grid-column-end: 4;
   }
-
   .menu__button {
     margin-top: 0;
     margin-bottom: 0;

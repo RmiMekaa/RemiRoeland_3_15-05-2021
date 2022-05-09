@@ -6,6 +6,7 @@
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -174,10 +175,6 @@ header h1:hover {
     margin: 0;
   }
 }
-body {
-  font-family: "Roboto";
-}
-
 /*---------------------------------------- Location ----------------------------------------*/
 .location {
   display: flex;
@@ -577,10 +574,6 @@ body {
     grid-column-end: 5;
   }
 }
-body {
-  font-family: "Roboto";
-}
-
 .thumb img {
   height: 16.25rem;
   width: 100%;
@@ -660,7 +653,8 @@ body {
 }
 
 /*------------------------------------- Animation: Fade In --------------------------------------------*/
-.menu__card, .menu__category {
+.menu__card,
+.menu__category {
   animation: fadeInMenu 1s ease-out;
   opacity: 0;
   animation-fill-mode: forwards;

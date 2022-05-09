@@ -1,8 +1,4 @@
-body {
-    font-family: "Roboto";
-}
-
-.thumb img{
+.thumb img {
     height: 16.25rem;
     width: 100%;
     object-fit: cover;
@@ -11,27 +7,32 @@ body {
 .menu {
     @include flexBox(column, null, null);
     position: relative;
-    margin-top: -2rem; /* superpose le menu et l'image */
+    margin-top: -2rem;
+    /* superpose le menu et l'image */
     border-radius: $border-radius*2;
     background-color: $background-color-light;
     padding: $padding;
     gap: 1rem;
+
     & section {
         @include flexBox(column, null, null);
         gap: 1rem;
     }
+
     &__heading {
         position: relative;
         font-size: 1.6rem;
         font-family: "Shrikhand";
         font-weight: normal;
     }
+
     &__category {
         font-size: 1rem;
         font-weight: normal;
         text-transform: uppercase;
         width: fit-content;
         margin-top: 1rem;
+
         &::after {
             display: block;
             content: "";
@@ -40,10 +41,12 @@ body {
             background-color: $tertiary-color;
         }
     }
+
     &__card {
         @include flexBox(row, space-between, center);
         @extend %card, %cursor-pointer;
         height: 4.25rem;
+
         & div {
             width: 80%;
             padding-left: $padding;
@@ -51,10 +54,12 @@ body {
             text-overflow: ellipsis;
             white-space: nowrap;
         }
+
         & h4 {
             text-overflow: ellipsis;
             overflow: hidden;
         }
+
         &__price {
             @extend %font-bold;
             @include flexBox(row, flex-end, null);
@@ -64,10 +69,12 @@ body {
             top: 0.6rem;
             width: 20%;
         }
+
         &__details {
             font-size: 0.8rem;
         }
     }
+
     &__button {
         width: 11.5rem;
         margin: 2rem auto 2.5rem auto;
@@ -76,17 +83,20 @@ body {
 
 /*------------------------------------- Animation: Fade In --------------------------------------------*/
 
-.menu__card, .menu__category {
+.menu__card,
+.menu__category {
     animation: fadeInMenu 1s ease-out;
     opacity: 0;
     animation-fill-mode: forwards;
     -webkit-tap-highlight-color: transparent;
 }
+
 @keyframes fadeInMenu {
     0% {
         transform: translateY(1.5rem);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -113,12 +123,12 @@ body {
     @extend %font-awesome-bold;
     color: white;
     font-size: 1.6rem;
-    content:"\f058";
+    content: "\f058";
 }
 
 .menu__card:hover .menu__card__effect {
     width: 6rem;
-} 
+}
 
 .menu__card:hover .menu__card__effect::after {
     transform: rotate(360deg);
@@ -128,11 +138,11 @@ body {
 /*-------------------------------------------- Media Queries ------------------------------------------------*/
 
 @media all and (min-width:1280px) {
- 
+
     .thumb {
         height: 20rem;
     }
-    
+
     .menu {
         display: grid;
         grid-template-columns: 32% 32% 32%;
@@ -140,15 +150,18 @@ body {
         gap: 2rem;
         padding: 2rem;
         background-color: white;
+
         & section {
             background-color: $background-color-light;
             border-radius: $border-radius*2;
             padding: 1rem 2rem 2rem 2rem;
         }
+
         &__heading {
             grid-column-start: 1;
             grid-column-end: 4;
         }
+
         &__button {
             margin-top: 0;
             margin-bottom: 0;

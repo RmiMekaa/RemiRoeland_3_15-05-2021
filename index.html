@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Réservez votre restaurant et composez votre menu en ligne pour un service instantané à votre arrivée !"/>
+    <meta name="description"
+        content="Réservez votre restaurant et composez votre menu en ligne pour un service instantané à votre arrivée !" />
     <title>ohmyfood</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="Ressources/images/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="Ressources/images/favicon.png" />
 </head>
+
 <body>
     <header>
-        <a href="index.html"><h1>ohmyfood</h1></a>
+        <a href="index.html">
+            <h1>ohmyfood</h1>
+        </a>
     </header>
 
     <div class=loader>
         <h1 class="loader__heading">ohmyfood</h1>
         <i class="loader__icon fas fa-utensils"></i>
         <div class="loader__plate"></div>
-        <span class="loader__open">OPEN</span> 
+        <span class="loader__open">OPEN</span>
     </div>
 
     <div class="location" onclick="">
@@ -56,34 +64,34 @@
             <article class="restaurants__card__label">
                 <h3>La palette du goût</h3>
                 <p>Ménilmontant</p>
-                <aside class="fav" onclick="">
+                <span class="fav" onclick="">
                     <i class="fav__empty-heart far fa-heart"></i>
                     <i class="fav__fill-heart fas fa-heart"></i>
-                </aside>
+                </span>
             </article>
-            <aside class="restaurants__card__new">Nouveau</aside>
+            <span class="restaurants__card__new">Nouveau</span>
         </a>
         <a href="LaNoteEnchantee.html" class="restaurants__card">
             <img src="Ressources/images/restaurants/Small/LaNoteEnchantee-500px.jpg" alt="">
             <article class="restaurants__card__label">
                 <h3>La note enchantée</h3>
                 <p>Charonne</p>
-                <aside class="fav" onclick="">
+                <span class="fav" onclick="">
                     <i class="fav__empty-heart far fa-heart"></i>
                     <i class="fav__fill-heart fas fa-heart"></i>
-                </aside>
+                </span>
             </article>
-            <aside class="restaurants__card__new">Nouveau</aside>
+            <span class="restaurants__card__new">Nouveau</span>
         </a>
         <a href="ALaFrancaise.html" class="restaurants__card">
             <img src="Ressources/images/restaurants/Small/ALaFrançaise-500px.jpg" alt="">
             <article class="restaurants__card__label">
                 <h3>À la française</h3>
                 <p>Cité Rouge</p>
-                <aside class="fav" onclick="">
+                <span class="fav" onclick="">
                     <i class="fav__empty-heart far fa-heart"></i>
                     <i class="fav__fill-heart fas fa-heart"></i>
-                </aside>
+                </span>
             </article>
         </a>
         <a href="LeDeliceDesSens.html" class="restaurants__card">
@@ -91,10 +99,10 @@
             <article class="restaurants__card__label">
                 <h3>Le délice des sens</h3>
                 <p>Folie-Méricourt</p>
-                <aside class="fav" onclick="">
+                <span class="fav" onclick="">
                     <i class="fav__empty-heart far fa-heart"></i>
                     <i class="fav__fill-heart fas fa-heart"></i>
-                </aside>
+                </span>
             </article>
         </a>
     </section>
@@ -107,4 +115,5 @@
         <a href="mailto:hello@ohmyfood.com">Contact</a>
     </footer>
 </body>
+
 </html>

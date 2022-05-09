@@ -394,7 +394,7 @@ header h1:hover {
   position: absolute;
   top: 1rem;
   color: white;
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", sans-serif;
   font-weight: normal;
   font-size: 3rem;
 }
@@ -417,7 +417,7 @@ header h1:hover {
 }
 .loader__open {
   position: absolute;
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", sans-serif;
   font-weight: normal;
   font-size: 4rem;
   color: white;
@@ -599,7 +599,7 @@ header h1:hover {
 .menu__heading {
   position: relative;
   font-size: 1.6rem;
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", sans-serif;
   font-weight: normal;
 }
 .menu__category {
